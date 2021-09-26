@@ -2,22 +2,22 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 set /p version=<VERSION.txt
 mkdir tmp
 cd tmp
-mkdir MyAdofaiMod
-cp ../Info.json MyAdofaiMod
-cp ../MyAdofaiMod/bin/Release/MyAdofaiMod.dll MyAdofaiMod
+mkdir TestMod
+copy ..\Info.json TestMod
+copy ..\TestMod\bin\Release\TestMod.dll TestMod
 
-cd MyAdofaiMod
+cd TestMod
 for /f "delims=" %%a in (Info.json) do (
     SET s=%%a
     SET s=!s:$VERSION=%version%!
     echo !s!
 )>>"InfoChanged.json"
-rm Info.json
-mv InfoChanged.json Info.json
+del Info.json
+move InfoChanged.json Info.json
 cd ..
 
-tar -a -c -f MyAdofaiMod-%version%.zip MyAdofaiMod
-mv MyAdofaiMod-%version%.zip ..
+tar -a -c -f TestMod-%version%.zip TestMod
+move TestMod-%version%.zip ..
 cd ..
-rm -rf tmp
+rd /s /q tmp
 pause

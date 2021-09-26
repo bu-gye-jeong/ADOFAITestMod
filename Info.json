@@ -1,11 +1,11 @@
 {
-  "Id": "MyAdofaiMod",
-  "DisplayName": "My ADOFAI Mod",
-  "Author": "<fill in>",
+  "Id": "TestMod",
+  "DisplayName": "Test Mod",
+  "Author": "bu-gye-jeong",
   "Version": "$VERSION",
   "ManagerVersion": "0.22.14.0",
-  "AssemblyName": "MyAdofaiMod.dll",
-  "EntryMethod": "MyAdofaiMod.Startup.Load",
-  "HomePage": "<fill in or delete>",
-  "Repository": "<fill in or delete>"
+  "AssemblyName": "TestMod.dll",
+  "EntryMethod": "TestMod.Startup.Load",
+  "HomePage": "https://github.com/bu-gye-jeong/ADOFAITestMod",
+  "Repository": "https://raw.githubusercontent.com/bu-gye-jeong/ADOFAITestMod/master/Repository.json"
 }
